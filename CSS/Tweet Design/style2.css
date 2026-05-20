@@ -1,0 +1,91 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+/* ── Tweet card ── */
+.tweet {
+  background-color: #fff;
+  border: 1px solid #cfd9de;
+  border-radius: 16px;
+  padding: 12px;
+
+  /* Avatar on left, content on right */
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+/* ── Avatar ── */
+.tweet-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;     /* Fully rounded */
+  flex-shrink: 0;
+}
+
+/* ── Right-side content column ── */
+.tweet-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;           /* Prevents text overflow breaking layout */
+}
+
+/* ── Header row: name + metadata ── */
+.tweet-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.tweet-name {
+  color: #000;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.tweet-metadata {
+  color: #71767b;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+/* ── Message ── */
+.tweet-message {
+  color: #0f1419;
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* ── Actions row ── */
+.tweet-actions {
+  display: flex;
+  justify-content: space-between;   /* Equal spacing between each action */
+  max-width: 425px;                 /* Does not stretch across entire row */
+  margin-top: 4px;
+}
+
+/* ── Each action (icon + count) ── */
+.tweet-action {
+  display: flex;
+  align-items: center;              /* Icon vertically centered with count */
+  gap: 4px;
+}
+
+.tweet-action svg {
+  fill: #536471;                    /* Icon color */
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ── Action count ── */
+.tweet-action-count {
+  color: #536471;
+  font-size: 13px;
+}
